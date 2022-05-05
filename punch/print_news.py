@@ -33,6 +33,7 @@ header = header.get_attribute('innerHTML')
 date = datetime.today().strftime('%Y-%m-%d')
 
 document.add_heading(header+'\n'+date, level=1)
+document.add_paragraph('source: https://punchng.com/')
 
 #Main page
 group0 = driver.find_elements_by_xpath('.//div[@class="group-section group-section-splits"]')

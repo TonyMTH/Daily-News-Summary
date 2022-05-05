@@ -32,12 +32,13 @@ header = main_content.find_element_by_xpath('.//h1[@class="heading heading--size
 date = datetime.today().strftime('%Y-%m-%d')
 
 document.add_heading(header + '\n' + date, level=1)
+document.add_paragraph('source: https://tvn24.pl/tvn24-news-in-english/')
 
 # Articles
 articles = main_content.find_elements_by_xpath('.//div[@class="teaser-wrapper"]')
 
 for i in range(len(articles)):
-    # Ttle
+    # Title
     title = articles[i].find_element_by_xpath('.//header[@class="article-header"]').text
     # Link
     link = articles[i].find_element_by_xpath('.//a[@class="default-teaser__link"]').get_attribute("href")
